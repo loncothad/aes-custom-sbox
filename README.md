@@ -1,4 +1,4 @@
-# aes-sbox
+# aes-custom-sbox
 
 [AES](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.197-upd1.pdf)
 implementation with support for custom S-Box.

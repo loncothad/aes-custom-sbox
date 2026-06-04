@@ -540,8 +540,9 @@ mod tests {
     }
 
     /// Verifies AES-256 encryption and decryption correctness using standard
-    /// NIST Known Answer Tests (KAT) Extracted directly from FIPS-197
-    /// Appendix C.3.
+    /// NIST Known Answer Tests (KAT).
+    ///
+    /// Source: FIPS-197 Appendix C.3.
     #[test]
     fn aes256_nist_vector() {
         let key = [
