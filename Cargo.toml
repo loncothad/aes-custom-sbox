@@ -1,17 +1,23 @@
 [package]
-name        = "aes-custom-sbox"
-description = "AES implementation with support for custom S-Box"
-version     = "1.0.0"
-edition     = "2024"
-authors     = [ "loncothad <me@loncothad.cc>" ]
-license     = "MIT OR Apache-2.0"
-repository  = "https://github.com/loncothad/aes-custom-sbox"
-categories  = [ "cryptography" ]
-keywords    = [ "aes" ]
-publish     = true
+name         = "aes-custom-sbox"
+description  = "AES implementation with support for custom S-Box"
+version      = "2.0.0"
+edition      = "2024"
+rust-version = "1.85"
+authors      = [ "loncothad <me@loncothad.cc>" ]
+license      = "MIT OR Apache-2.0"
+repository   = "https://github.com/loncothad/aes-custom-sbox"
+readme       = "README.md"
+categories   = [ "cryptography" ]
+keywords     = [ "aes" ]
+publish      = true
 
 [lints.rust]
+missing_docs     = "warn"
 non_ascii_idents = "forbid"
+
+[dev-dependencies]
+aes = "0.9"
 
 [lints.clippy]
 allow_attributes                = "warn"
@@ -61,14 +67,13 @@ flat_map_option                     = "warn"
 # float_arithmetic = "warn"
 # float_cmp = "warn"
 # float_cmp_const = "warn"
-fn_params_excessive_bools    = "warn"
-format_collect               = "warn"
-format_push_string           = "deny"
-from_iter_instead_of_collect = "warn"
-if_not_else                  = "warn"
-if_then_some_else_none       = "warn"
-ignore_without_reason        = "forbid"
-ignored_unit_patterns        = "warn"
+fn_params_excessive_bools = "warn"
+format_collect            = "warn"
+format_push_string        = "deny"
+if_not_else               = "warn"
+if_then_some_else_none    = "warn"
+ignore_without_reason     = "forbid"
+ignored_unit_patterns     = "warn"
 # impl_trait_in_params = "warn"
 implicit_clone                  = "warn"
 implicit_hasher                 = "warn"
@@ -110,7 +115,6 @@ min_ident_chars                     = "warn"
 mismatching_type_param_order        = "warn"
 missing_assert_message              = "forbid"
 missing_const_for_fn                = "warn"
-missing_docs                        = "warn"
 missing_errors_doc                  = "forbid"
 missing_panics_doc                  = "forbid"
 mixed_read_write_in_expression      = "warn"
@@ -158,7 +162,6 @@ single_option_map                   = "deny"
 # str_split_at_newline = "warn"
 string_add                   = "forbid"
 string_add_assign            = "forbid"
-string_to_string             = "warn"
 struct_field_names           = "warn"
 suboptimal_flops             = "deny"
 tests_outside_test_module    = "forbid"

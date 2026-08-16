@@ -1,0 +1,66 @@
+[package]
+name    = "aes-custom-sbox-fuzz"
+version = "0.0.0"
+publish = false
+edition = "2024"
+
+[package.metadata]
+cargo-fuzz = true
+
+[dependencies]
+libfuzzer-sys = "0.4"
+
+[dependencies.aes-custom-sbox]
+path = ".."
+
+[dependencies.aes]
+version = "0.9"
+
+[[bin]]
+bench = false
+doc   = false
+name  = "roundtrip_aes128"
+path  = "fuzz_targets/roundtrip_aes128.rs"
+test  = false
+
+[[bin]]
+bench = false
+doc   = false
+name  = "roundtrip_aes192"
+path  = "fuzz_targets/roundtrip_aes192.rs"
+test  = false
+
+[[bin]]
+bench = false
+doc   = false
+name  = "roundtrip_aes256"
+path  = "fuzz_targets/roundtrip_aes256.rs"
+test  = false
+
+[[bin]]
+bench = false
+doc   = false
+name  = "custom_sbox_roundtrip"
+path  = "fuzz_targets/custom_sbox_roundtrip.rs"
+test  = false
+
+[[bin]]
+bench = false
+doc   = false
+name  = "differential"
+path  = "fuzz_targets/differential.rs"
+test  = false
+
+[[bin]]
+bench = false
+doc   = false
+name  = "gf28_field_axioms"
+path  = "fuzz_targets/gf28_field_axioms.rs"
+test  = false
+
+[[bin]]
+bench = false
+doc   = false
+name  = "sbox_generation"
+path  = "fuzz_targets/sbox_generation.rs"
+test  = false
